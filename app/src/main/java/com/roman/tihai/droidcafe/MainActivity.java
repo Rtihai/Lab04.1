@@ -53,7 +53,18 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_order) {
+            Intent intent = new Intent(MainActivity.this, OrderActivity.class);
+            startActivity(intent);
+            return true;
+        } else if (id == R.id.action_contact) {
+            displayToast("Contact Selected");
+            return true;
+        } else if (id == R.id.action_favorites) {
+            displayToast("Favorite Selected");
+            return true;
+        } else if (id == R.id.action_status) {
+            displayToast("Status Selected");
             return true;
         }
 
